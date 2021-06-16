@@ -26,7 +26,9 @@ public class ListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
-        //populate user list
+        DBHandler db = new DBHandler(this);
+        userList = db.getUsers();
+        /*//populate user list
         userList = new ArrayList<>();
         for(int i=0; i<20; i++)
         {
@@ -36,7 +38,7 @@ public class ListActivity extends AppCompatActivity {
             u.description = "Description " + new Random().nextInt();
             u.followed = new Random().nextInt()%2 == 0;
             userList.add(u);
-        }
+        }*/
 
 
 

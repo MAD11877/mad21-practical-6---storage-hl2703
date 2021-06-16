@@ -100,6 +100,8 @@ public class MainActivity extends AppCompatActivity {
                 else
                     Toast.makeText(getApplicationContext(),"unfollowed",Toast.LENGTH_SHORT).show();
                 setFollowBtn();
+                DBHandler db = new DBHandler(MainActivity.this);
+                db.updateUser(u);
             }
         });
     }
